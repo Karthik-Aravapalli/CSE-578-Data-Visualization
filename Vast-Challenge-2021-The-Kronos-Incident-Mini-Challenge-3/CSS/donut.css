@@ -1,0 +1,9 @@
+.areaDonutDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33%; 
+    height: 600px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}

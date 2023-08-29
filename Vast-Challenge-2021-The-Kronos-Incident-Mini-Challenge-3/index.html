@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <title>Team Project - CSE 578 - Spring 2023</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud.min.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="js/timeline.js" defer></script>
+        <link rel="stylesheet" href="CSS/timeline.css"/>
+        <script src="js/streamGraph.js" defer></script>
+        <link rel="stylesheet" href="CSS/streamgraph.css"/>
+        <script src="js/areaDonut.js" defer></script>
+        <link rel="stylesheet" href="CSS/donut.css"/>
+        <script src="js/innovativeMain.js" defer></script>
+        <link rel="stylesheet" href="CSS/innovativeStyle.css"/>
+        <link rel="stylesheet" href="CSS/index.css"/>
+        <script src="js/map.js" defer></script>
+        <link rel="stylesheet" href="CSS/map.css"/>
+        <script src="js/wordCloud.js" defer></script>
+        <link rel="stylesheet" href="CSS/wordCloud.css"/>
+
+</head>
+<body>
+<header>
+    <h1 class="text-center">Vast Challenge 2021 Minichallenge 3</h1>
+    <h3 class="text-center">The Kronos Incident</h3>
+    <hr style="width: 75%; color: black; margin: auto;">
+    <div class="timelineSliderDiv"></div>
+</header>
+<main>
+<div class="chartContainer">
+    <div class="chartRow">
+        <div class="timelineDiv">
+            <div class="timelineToolTip_div" id="timelineToolTip_div"></div>
+        </div>
+    </div>
+
+    <div class="chartRow">
+        <div id="streamToolTip_div"></div>
+        <div class="streamGraphDiv"></div>
+        <div class="areaDonutDiv"></div>
+    </div>
+
+    <div class="chartRow">
+        <div id="tooltip_div"></div>
+        <div class="innovativeChart"></div>
+    </div>
+
+    <div class="chartRow">
+        <div class="mapDiv" id="mapDiv">
+            <div class="mapToolTip_div" id="mapToolTip_div"></div>
+        </div>
+        
+        <div class="wordCloudDiv">
+            <div id="wordCloud_svg" style="width: 550px; height: 350px; border: 1px solid #ccc;">
+                </div>
+                <div id = "div_range">
+                    Terms:
+                    <input type="range" id="range" min="10" max="100"  oninput="rangeValue.innerText = this.value">
+                    <p id="rangeValue">100</p>
+                </div>
+                <div class="toggle-buttons">
+                    <button onclick="update_wordCloud('tfidf-btn')">TF-IDF</button>
+                    <button onclick="update_wordCloud('freq-btn')">Frequency</button>
+                </div>
+        </div>
+    </div>
+
+</div>
+</main>
+</body>
+</html> 

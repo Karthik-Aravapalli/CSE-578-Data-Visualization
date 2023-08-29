@@ -1,0 +1,27 @@
+header{
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: aliceblue;
+}
+main{
+    padding-top: 220px;
+}
+.chartContainer{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    overflow: hidden;
+    min-height: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chartRow {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
