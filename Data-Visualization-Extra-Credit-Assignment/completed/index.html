@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Homework #: D3 Joins and Interactions - CSE 578 - Spring 2023</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>       
+    </head>
+
+    <style>
+        body {
+            padding: 16px;
+        }
+        #multiselect{
+            width:auto;
+            padding:auto;
+        }
+        #multiselect,#my_dataviz{
+            text-align: center;
+        }
+        .card{
+            height: 250px;
+            width:750px;
+            margin: auto;
+        }
+        svg {
+            display: block; 
+            margin: 0 auto;
+        }
+
+ 
+    </style>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center"><b>Homework #Extra Credit: D3 Joins and Interactions</b></h1>
+            <h3 class="text-center"><b>Karthik Aravapalli - karavapa@asu.edu</b></h3>
+            <div class="card border border-info border-2 bg-light rounded">
+                <div class="card-header bg-info fs-4 text-center">
+                    <b>User Control</b>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="multiselect">
+                            <br>
+                            <b>Country Selection:</b>
+                            <br>
+                            <div class="toggle-buttons">
+                                <div class="row">
+                                    <label class="radio">
+                                        <input type="radio" onclick="update_stack('Canada')" name="foobar" checked>
+                                        Canada
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" onclick="update_stack('Swaziland')" name="foobar">
+                                        Swaziland
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" onclick="update_stack('Arab World')" name="foobar">
+                                        Arab World
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" onclick="update_stack('Cambodia')" name="foobar">
+                                        Cambodia
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" onclick="update_stack('Aruba')" name="foobar">
+                                        Aruba
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row2">
+                            <br>
+                            <b>Health Data Summary:</b>
+                            <div class="country-return">
+                                <span style="display: inline-block; width: 110px;">Country Name:</span>
+                                <div id="Country_Name" style="display: inline-block;"></div>
+                            </div>
+                            <div class="birth-return">
+                                <span style="display: inline-block; width: 140px;">Birth_Rate_Average:</span>
+                                <div id="Birth_Average" style="display: inline-block;"></div>
+                            </div>
+                            <div class="death-return">
+                                <span style="display: inline-block; width: 150px;">Death_Rate_Average:</span>
+                                <div id="Death_Average" style="display: inline-block;"></div>
+                            </div>
+                            <div class="fertility-return">
+                                <span style="display: inline-block; width: 160px;">Fertility_Rate_Average:</span>
+                                <div id="Fertility_Average" style="display: inline-block;"></div>
+                            </div>
+                            <div class="population-return">
+                                <span style="display: inline-block; width: 205px;">Population_Growth_Average:</span>
+                                <div id="Population_Average" style="display: inline-block;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            
+                    
+
+            </div>
+            <div id="my_dataviz">
+                <!-- write svg here -->
+            </div>
+            <script src="js/main.js"></script> 
+        </div>
+    </body>
+</html>
